@@ -1,0 +1,1 @@
+<div><?php ptrans("You don't have the permission to access this page");?>.</div>

@@ -1,0 +1,11 @@
+// Get all sub-organizations rows which are a chiled of 4
+select  id,
+        name,
+        parent_id 
+from    (select * from organizations
+         order by parent_id, id) products_sorted,
+        (select @pv := '4') initialisation
+where   find_in_set(parent_id, @pv) > 0
+and     @pv := concat(@pv, ',', id)
+
+

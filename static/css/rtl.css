@@ -1,0 +1,23 @@
+body {
+	font-family:tahoma;
+}
+
+.pull {
+	float: left;
+}
+
+#forgot-pass {
+	direction: rtl;
+}
+
+.tree li::before, .tree li::after {
+    right: -20px !important;
+}
+
+.group-name {
+    float: right !important;
+}
+
+.group-content .badge {
+    float: left !important;
+}
