@@ -25,6 +25,3 @@ function print_tree_html($arr){
 		}
 	echo '</ul>';
 }
-
-v(get_defined_functions());
-

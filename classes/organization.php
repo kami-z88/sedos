@@ -52,7 +52,8 @@ class Organization{
 
 		}else{
 			// Add all permissions for this user
-			$this->add_user($oid, $uid, $phone, implode(',', ORG_PERMISSIONS));
+			global $org_permissions;
+			$this->add_user($oid, $uid, $phone, implode(',', $org_permissions));
 		}
 
 		return $result;

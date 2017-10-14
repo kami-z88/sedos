@@ -37,7 +37,8 @@ $(document).ready(function(){
 				<h4><?php ptrans('Permissions'); ?></h4>
 				<ul class="permission">
 				<?php 
-					foreach (ORG_PERMISSIONS as $key => $value) {
+				    global $org_permissions;
+					foreach ($org_permissions as $key => $value) {
 						$permission = trans( strtolower( str_replace('_',' ',$value)) );
 				
 						if(in_array($value, $content['organization']['permissions'])){

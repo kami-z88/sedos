@@ -64,7 +64,8 @@ $(document).ready(function(){
 				<h4><?php ptrans("Permissions"); ?></h4>
 				<ul>
 				<?php 
-					foreach (GROUP_PERMISSIONS as $key => $value) {
+				    global $group_permissions;
+					foreach ($group_permissions as $key => $value) {
 						
 						if(in_array($value, $content['group']['permissions']))
 							echo '<li><input id="' . $value . '" type="checkbox" name="' . $value . '" checked="checked" /><label for="' . $value . '" class="permission">' . strtolower( str_replace('_',' ',$value)) . '</label></li>';

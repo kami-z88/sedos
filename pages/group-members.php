@@ -17,7 +17,8 @@ if(isset($_POST["do-invite-member"])){
 if(isset($_POST["do-add-admin"])){
 	$phone = validate_phone($_POST['phone']);
 	if($phone){
-		foreach (GROUP_PERMISSIONS as $key => $value)
+	    global $group_permissions;
+		foreach ($group_permissions as $key => $value)
 			if(isset($_POST[$value]) and $_POST[$value]=='on')
 				$perms[] = $value;
 		$permissions = implode(',', $perms);

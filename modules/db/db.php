@@ -1,4 +1,8 @@
 <?php
+ini_set("include_path", '/home/sedosir/php:' . ini_get("include_path") );
+
+require_once('PEAR.php');
+pear::loadExtension('mysqli');
 class Database{
 		var $last_query; //Saved result of the last query made
 		var $last_result; //Results of the last query made
@@ -16,8 +20,8 @@ class Database{
 		}
 
 		// Connect to mysqli database
-		function database() {
-			$this->link=mysqli_connect(DB_HOST, DB_USER, DB_PASS, 'sedos') or die('Server connection not possible.');
+		function __construct() {
+			$this->link=mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) or die('Server connection not possible.');
 			//Set All Charsets to UTF8
 			mysqli_query($this->link, "SET character_set_results=utf8 , character_set_client=utf8 , character_set_connection=utf8 , character_set_database=utf8 , character_set_server=utf8");
 			mysqli_select_db($this->link, DB_NAME) or die('Database connection not possible.');

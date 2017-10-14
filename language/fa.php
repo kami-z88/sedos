@@ -1,4 +1,5 @@
 <?php
+global $lang;
 $lang = array(
 	'hello' => 'سلام',
 	'hello world' => 'سلام دنیا',
@@ -168,8 +169,4 @@ $lang = array(
 	'Nothing found - sorry' => 'متاسفم! چیزی یافت نشد.',
 	'(filtered from _MAX_ total records)' => ')فیلتر شده از کل _MAX_ رکورد(',
 	'Message for groups under organization:' => 'پیام برای گروههای تحت سازمان:',
-	'' => '',
-	'' => '',
-	'' => '',
-
 );

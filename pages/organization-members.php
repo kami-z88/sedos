@@ -8,7 +8,8 @@ $org = new Organization($oid);
 if(isset($_POST["do-add-admin"])){
 	$phone = validate_phone($_POST['phone']);
 	if($phone){
-		foreach (ORG_PERMISSIONS as $key => $value)
+	    global $org_permissions;
+		foreach ($org_permissions as $key => $value)
 			if(isset($_POST[$value]) and $_POST[$value]=='on')
 				$perms[] = $value;
 		$permissions = implode(',', $perms);

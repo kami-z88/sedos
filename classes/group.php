@@ -32,7 +32,8 @@ class Group{
 
 	public function create($name, $uid, $oid = null ){
 		$gid = $this->add($name, $oid);
-		$permissions = implode(',', GROUP_PERMISSIONS);
+		global $group_permissions;
+		$permissions = implode(',', $group_permissions);
 		$this->add_user($gid,$uid,null,'admin', $permissions );
 		return $this->db->last_id();
 	}

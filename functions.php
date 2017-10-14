@@ -6,14 +6,16 @@ function v($data){
 }
 
 function trans($text){
-	if(LANG[$text])
-		return LANG[$text];
+    global $lang;
+	if($lang[$text])
+		return $lang[$text];
 	else
 		return $text;
 }
 function ptrans($text){
-	if(LANG[$text])
-		echo LANG[$text];
+    global $lang;
+	if($lang[$text])
+		echo $lang[$text];
 	else
 		echo $text;
 }
