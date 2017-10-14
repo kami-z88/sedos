@@ -1,23 +1,32 @@
 <?php
-// php error configuration
-//error_reporting( E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
-
-//require_once('PEAR.php');
-//pear::loadExtention('mysqli');
 
 // Database configuration
-define('DB_NAME', 'sedosir_uni');
-define('DB_USER', 'sedosir_master');
-define('DB_PASS', '&aWx0RMxVw8}');
-define('DB_HOST', 'localhost:3306');
+//define('DB_NAME', 'sedosir_uni');
+//define('DB_USER', 'sedosir_master');
+//define('DB_PASS', '&aWx0RMxVw8}');
+//define('DB_HOST', 'localhost:3306');
+//
+//define('SITE_NAME', 'sedos.ir/');
+//define('SITE_URL', 'http://'.SITE_NAME);
+//define('SITE_DIR', dirname(__FILE__));
+//define('PRETTY_URLS', true);
+//define('RTL', false);
 
-define('SITE_NAME', 'sedos.ir/');
+
+// Database configuration
+define('DB_NAME', 'sedos');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_HOST', 'localhost');
+
+define('SITE_NAME', 'localhost/sedos/');
 define('SITE_URL', 'http://'.SITE_NAME);
 define('SITE_DIR', dirname(__FILE__));
 define('PRETTY_URLS', true);
-define('RTL', false);
-
+define('RTL', true);
 define('LANGUAGE', 'fa');
+
+
 include_once BASE_DIR.'language/'.LANGUAGE.'.php';
 
 define('HASH', 'asdjklsdfjlkjlkgsajlgu9009gasd90gdsf');
